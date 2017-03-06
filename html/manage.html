@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>辅导员信息管理系统</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div id="background">
+    <div id="header">
+        <span id="title">辅导员信息管理系统</span>
+        <span><input id="add-button" type="button" value="添加信息"></span>
+    </div>
+    <div id="manage-main">
+        <table id="inf-table">
+            <tr>
+                <th>ID</th>
+                <th>姓名</th>
+                <th>学院编号</th>
+                <th>学院名称</th>
+                <th>所在年级</th>
+                <th>编辑栏</th>
+            </tr>
+            <tr class="table-tr">
+                <td>201401010101</td>
+                <td>王安琪</td>
+                <td>08</td>
+                <td>信息科学与工程学院</td>
+                <td>2014</td>
+                <td>
+                    <span>
+                        <label for="edit-button-1"><span class="edit-label"></span></label>
+                        <input id="edit-button-1" class="edit-button" type="button">
+                    </span>
+                    <span>
+                        <label for="delete-button-1"><span class="delete-label"></span></label>
+                        <input id="delete-button-1" class="delete-button" type="button">
+                    </span>
+                </td>
+            </tr>
+            <tr class="table-tr">
+                <td>2</td>
+                <td>辅导员</td>
+                <td>0X</td>
+                <td>很多字很多字很多字很多很多字很多字很多字很多字很多字很多字的学院</td>
+                <td>2014</td>
+                <td>
+                    <span>
+                        <label for="edit-button-2"><span class="edit-label"></span></label>
+                        <input id="edit-button-2" class="edit-button" type="button">
+                    </span>
+                    <span>
+                        <label for="delete-button-2"><span class="delete-label"></span></label>
+                        <input id="delete-button-2" class="delete-button" type="button">
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="popup" id="popup">
+    <div class="popup-add" id="popup-add">
+        <form id="manage-add-form" action="#" method="post">
+            <ul>
+                <li>
+                    <label for="add-instructor-id">ID</label><input type="text" class="popup-text" id="add-instructor-id" name="instructor-id">
+                </li>
+                <li>
+                    <label for="add-instructor-name">姓名</label><input type="text" class="popup-text" id="add-instructor-name" name="instructor-name">
+                </li>
+                <li>
+                    <label for="add-college-number">学院编号</label><input type="text" class="popup-text" id="add-college-number" name="college-number">
+                </li>
+                <li>
+                    <label for="add-college-name">学院名称</label><input type="text" class="popup-text" id="add-college-name" name="college-name">
+                </li>
+                <li>
+                    <label for="add-instructor-grade">所在年级</label><input type="text" class="popup-text" id="add-instructor-grade" name="instructor-grade">
+                </li>
+                <li>
+                    <input id="manage-add-cancel" class="popup-buttons" type="button" value="取消">
+                    <input id="manage-add-submit" class="popup-submits" type="submit" value="确认添加">
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="popup-edit" id="popup-edit">
+        <form id="manage-edit-form" action="#" method="post">
+            <ul>
+                <li>
+                    <label for="instructor-id">ID</label><input type="text" class="popup-text" id="instructor-id" name="instructor-id" readonly>
+                </li>
+                <li>
+                    <label for="instructor-name">姓名</label><input type="text" class="popup-text" id="instructor-name" name="instructor-name" readonly>
+                </li>
+                <li>
+                    <label for="college-number">学院编号</label><input type="text" class="popup-text" id="college-number" name="college-number">
+                </li>
+                <li>
+                    <label for="college-name">学院名称</label><input type="text" class="popup-text" id="college-name" name="college-name">
+                </li>
+                <li>
+                    <label for="instructor-grade">所在年级</label><input type="text" class="popup-text" id="instructor-grade" name="instructor-grade">
+                </li>
+                <li>
+                    <input id="manage-edit-cancel" class="popup-buttons" type="button" value="取消">
+                    <input id="manage-edit-submit" class="popup-submits" type="submit" value="确认修改">
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="popup-delete" id="popup-delete">
+        <p>确认删除本条信息？</p>
+        <p id="delete-inf">ID xxxx 辅导员姓名 xxx</p>
+        <form action="#" method="post">
+            <!--将表格对应行的id传给了这个标签的value-->
+            <input id="manage-delete-hidden" name="manage-delete-hidden" type="hidden">
+            <input id="manage-delete-cancel" class="popup-buttons" type="button" value="取消">
+            <input id="manage-delete-submit" class="popup-submits" type="submit" value="确认删除">
+        </form>
+    </div>
+</div>
+<script src="../js/script.js"></script>
+</body>
+</html>
